@@ -33,13 +33,13 @@ jobs:
         with:
           distribution: 'temurin' # See 'Supported distributions' for available options
           java-version: '8' 
-      - run: java -v  
+      - run: java -version
 
       # Run Android Emulator
       - uses: actions/checkout@v3
       - name: Install Android SDK
         run: |
-          java --version 
+          java -version
           brew install android-sdk
           sdkmanager "build-tools;33.0.0" "platform-tools" "emulator" "system-images;android-33;google_apis;x86_64" "platforms;android-33"
           sdkmanager --list_installed
