@@ -33,9 +33,9 @@ jobs:
       - uses: actions/checkout@v3
       - name: Install Android SDK
         run: |
-          brew --cask uninstall java
+          brew uninstall java
           brew tap homebrew/cask-versions
-          brew --cask install homebrew/cask-versions/adoptopenjdk8
+          brew install --cask adoptopenjdk8
           brew install android-sdk
           sdkmanager "build-tools;33.0.0" "platform-tools" "emulator" "system-images;android-33;google_apis;x86_64" "platforms;android-33"
           sdkmanager --list_installed
