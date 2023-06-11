@@ -35,7 +35,7 @@ jobs:
         run: |
           brew uninstall --ignore-dependencies java
           brew tap homebrew/cask-versions
-          brew install --cask adoptopenjdk8
+          brew install --cask homebrew/cask-versions/temurin8
           brew install android-sdk
           sdkmanager "build-tools;33.0.0" "platform-tools" "emulator" "system-images;android-33;google_apis;x86_64" "platforms;android-33"
           sdkmanager --list_installed
