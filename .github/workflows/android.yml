@@ -36,7 +36,6 @@ jobs:
           brew install android-sdk
           avdmanager create avd --name Pixel_2_API_29 \
           --abi google_apis/x86 \
-          --system-image system-images;android-29;google_apis;x86
           emulator -avd Pixel_2_API_29
       - uses: actions/checkout@v3
       - name: Check device list
