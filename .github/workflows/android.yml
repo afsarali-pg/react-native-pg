@@ -45,10 +45,10 @@ jobs:
           disable-animations: true
           script: |
            adb install app/PG.apk
-           ./android-emulator-test.sh
+           
           
           
-      - uses: actions/checkout@v3
+      - uses: reactivecircus/android-emulator-runner@v2
       - name: Check device list
         run: |
           adb devices
