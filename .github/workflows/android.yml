@@ -34,9 +34,11 @@ jobs:
       - name: Install Android SDK
         run: |
           brew install android-sdk
-          avdmanager create avd --name Pixel_2_API_29 \
-          --abi google_apis/x86
+          sdkmanager "build-tools;33.0.0" "platform-tools" "emulator" "system-images;android-33;google_apis;x86_64" "platforms;android-33"
+          sdkmanager --list_installed
+          avdmanager create avd -n "Pixel_5" -d "pixel_5" -k "system-images;android-33;google_apis;x86_64"
       - uses: actions/checkout@v3
       - name: Check device list
         run: |
+          emulator -list-avds
           emulator -list-devices
