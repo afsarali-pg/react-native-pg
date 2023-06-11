@@ -40,7 +40,8 @@ jobs:
       - name: Install Android SDK
         run: |
           java -version
-          y | brew install android-sdk
+          brew install android-sdk --no-license
+          yes | sdkmanager --licenses
           sdkmanager "build-tools;33.0.0" "platform-tools" "emulator" "system-images;android-33;google_apis;x86_64" "platforms;android-33"
           sdkmanager --list_installed
           avdmanager create avd -n "Pixel_5" -d "pixel_5" -k "system-images;android-33;google_apis;x86_64"
