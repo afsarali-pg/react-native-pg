@@ -36,7 +36,7 @@ jobs:
       - run: java -version
 
 
-      - name: run tests
+      - name: Start Emulator
         uses: reactivecircus/android-emulator-runner@v2
         with:
           api-level: 29
