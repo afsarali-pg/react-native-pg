@@ -19,4 +19,4 @@ function reset_emulator() {
 
 reset_emulator
 
-$ADB install app/pg.apk
+$ADB install app/PG.apk
