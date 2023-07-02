@@ -5,5 +5,4 @@ npm install -g appium
 # appium driver install espresso
 
 appium -v
-appium driver install uiautomator2
 appium --base-path /wd/hub --log appium.log &>/dev/null &
