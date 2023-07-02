@@ -60,7 +60,7 @@ exports.config = {
         'appium:deviceName': 'Nexus 6', // or "iPhone Simulator"
         'appium:platformVersion': '12.0', // or "16.2" (for running iOS v16)
         'appium:automationName': 'UiAutomator2', // or "XCUITest"
-        "appium:app": "./app/PG.apk",
+        "appium:app": process.cwd()+"/app/PG.apk",
     }],
     //
     // ===================
