@@ -11,6 +11,8 @@ npm i -g npm-upgrade
 npm i y18n
 
 npm install -g @wdio/cli
+npm install @puppeteer/browsers@latest --save-dev
+
 
 npm install
 wdio run ./wdio.conf.js
