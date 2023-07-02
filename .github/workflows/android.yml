@@ -52,7 +52,10 @@ jobs:
           force-avd-creation: false
           emulator-options: -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
           disable-animations: true
+          arch: x86_64
+          profile: Nexus 6
           script: |
+           adb devices
            adb install app/PG.apk
            node -v
            chmod +x ./Scripts/RunTest.sh
