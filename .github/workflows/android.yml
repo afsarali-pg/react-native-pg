@@ -50,14 +50,17 @@ jobs:
           disable-animations: true
           script: |
            adb install app/PG.apk
+           chmod +x ./Scripts/RunTest.sh
+           sh ./Scripts/RunTest.sh
+
           #  Install WDIO and run appium test
            
           
           
-      - uses: reactivecircus/android-emulator-runner@v2
-      - name: Check device list
-        run: |
-          adb devices
+      # - uses: reactivecircus/android-emulator-runner@v2
+      # - name: Check device list
+      #   run: |
+      #     adb devices
 #         emulator -list-devices
   # Run Android Emulator
         # You may pin to the exact commit or the version.
