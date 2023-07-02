@@ -35,6 +35,11 @@ jobs:
           java-version: '8' 
       - run: java -version
 
+      - name: Install and Run Appium
+        run: |
+          chmod +x ./Scripts/RunAppium.sh
+          ./Scripts/RunAppium.sh
+        shell: bash  
 
       - name: Start Emulator
         uses: reactivecircus/android-emulator-runner@v2
@@ -45,6 +50,7 @@ jobs:
           disable-animations: true
           script: |
            adb install app/PG.apk
+          #  Install WDIO and run appium test
            
           
           
