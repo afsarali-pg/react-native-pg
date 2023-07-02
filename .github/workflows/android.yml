@@ -62,7 +62,10 @@ jobs:
            sh ./Scripts/RunTest.sh
 
           #  Install WDIO and run appium test
-           
+      - uses: actions/upload-artifact@v3
+        with:
+            name: appiumlog
+            path: ./appium.log     
           
           
       # - uses: reactivecircus/android-emulator-runner@v2
