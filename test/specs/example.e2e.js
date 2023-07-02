@@ -6,6 +6,7 @@ describe('My Login application', () => {
         
         await MenuPage.hamburgerMenu.click();
         await expect(MenuPage.signupLoginButton).toBeExisting();
+        await expect(MenuPage.mortgageTab).toBeExisting();
         
     })
 })

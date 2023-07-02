@@ -1,8 +1,10 @@
 class MenuPage {
     // Menu elements
-    get hamburgerMenu() { return $(`//*[@resource-id='com.allproperty.android.consumer.sg.debug:id/toolbar']/android.widget.ImageButton[1]`); }
-    get logoutButton() { return $(`//*[@resource-id='com.allproperty.android.consumer.sg.debug:id/drawer_logout']`); }
-    get signupLoginButton() { return $(`//*[@resource-id='com.allproperty.android.consumer.sg.debug:id/drawer_login']`); }
+    get hamburgerMenu() { return $(`//*[@resource-id='hamburgerIcon']`); }
+    get logoutButton() { return $(`//*[@resource-id='loginSignUpBtn']`); }
+    get signupLoginButton() { return $(`//*[@resource-id='loginSignUpBtn']`); }
+
+    get mortgageTab() { return $(`//*[@resource-id='homeFinanceTab']`); }
 
     // Search-related elements
     get searchButton() { return $(`//*[@resource-id='com.allproperty.android.consumer.sg.debug:id/search_button']`); }
