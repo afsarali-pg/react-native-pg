@@ -34,6 +34,10 @@ jobs:
           distribution: 'temurin' # See 'Supported distributions' for available options
           java-version: '8' 
       - run: java -version
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
 
       - name: Install and Run Appium
         run: |
@@ -50,6 +54,7 @@ jobs:
           disable-animations: true
           script: |
            adb install app/PG.apk
+           node -v
            chmod +x ./Scripts/RunTest.sh
            sh ./Scripts/RunTest.sh
 
