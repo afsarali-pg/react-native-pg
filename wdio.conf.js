@@ -58,7 +58,7 @@ exports.config = {
         // capabilities for local Appium web tests on an Andr
         "platformName": "Android",
         'appium:deviceName': 'emulator-5554', // or "iPhone Simulator"
-        'appium:platformVersion': '10.0', // or "16.2" (for running iOS v16)
+        'appium:platformVersion': '12.0', // or "16.2" (for running iOS v16)
         'appium:automationName': 'UiAutomator2', // or "XCUITest"
         "appium:app": process.cwd()+"/app/app-sg.apk",
     }],
